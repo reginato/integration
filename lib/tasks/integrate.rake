@@ -69,7 +69,7 @@ namespace :integration do
 
   desc 'Run bundle install'
   task :bundle_install do
-    sh 'bundle install --quiet'
+    sh 'bundle install'
   end
 
 end
