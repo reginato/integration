@@ -53,7 +53,7 @@ namespace :integration do
     end
   end
 
-  task :start => ["git:status_check", "log:clear", "tmp:clear", "backup:local"] do
+  task :start => ["git:status_check", "log:clear", "tmp:clear"] do
     ENV['COVERAGE'] = 'on'
   end
   task :finish => ["bundle exec cap deploy:migrations"]
