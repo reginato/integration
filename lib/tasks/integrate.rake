@@ -56,7 +56,7 @@ namespace :integration do
   task :start => ["git:status_check", "log:clear", "tmp:clear", "backup:local"] do
     ENV['COVERAGE'] = 'on'
   end
-  task :finish => [""]
+  task :finish => ["bundle exec cap deploy:migrations"]
 
   desc 'Check code coverage'
   task :coverage_verify do
