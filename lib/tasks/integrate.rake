@@ -53,10 +53,10 @@ namespace :integration do
     end
   end
 
-  task :start => ["git:status_check", "log:clear", "tmp:clear", "backup:local", "git:pull"] do
+  task :start => ["git:status_check", "log:clear", "tmp:clear", "backup:local"] do
     ENV['COVERAGE'] = 'on'
   end
-  task :finish => ["git:push"]
+  task :finish => [""]
 
   desc 'Check code coverage'
   task :coverage_verify do
